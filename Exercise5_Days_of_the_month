@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    char answ;
+    int num;
+
+    int days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    string month[] = {
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    };
+
+    do {
+        cout << "Enter month number (1-12): ";
+        cin >> num;
+
+        if (num < 1 || num > 12) {
+            cout << "Invalid month number. Please try again." << endl;
+        } else {
+            cout << "Number of days in " << month[num - 1] 
+                 << ": " << days[num - 1] << endl;
+        }
+
+        cout << "Do you want to check another month? (y/n): ";
+        cin >> answ;
+
+    } while (answ == 'y' || answ == 'Y');
+
+    return 0;
+}

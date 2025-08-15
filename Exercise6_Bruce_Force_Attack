@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int targetPIN = 123; // The PIN to "crack"
+    int guess = 0;
+    int attempts = 0;
+
+    cout << "Starting brute-force attack...\n";
+
+    // Brute-force loop
+    while (true) {
+        attempts++;
+        if (guess == targetPIN) {
+            cout << "PIN found: " << guess << endl;
+            cout << "Attempts: " << attempts << endl;
+            break;
+        }
+        guess++;
+    }
+
+    return 0;
+}

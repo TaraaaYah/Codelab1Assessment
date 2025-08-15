@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int Guess;
+int Total;
+
+int main() {
+    string Name;
+    cout << "Enter your name: ";
+    getline(cin, Name);
+    
+    cout << "Hello, " << Name << "! Welcome to the quiz game." << endl;
+
+    // Initialize total score
+    Total = 0;
+
+    // Question 1
+    cout << "Question 1: What is the capital of United Kingdom?" << endl;
+    cout << "1. Manchester" << endl;
+    cout << "2. Birmingham" << endl;
+    cout << "3. Newcastle" << endl;
+    cout << "4. London" << endl;
+    cout << "Enter your answer (1-4): ";
+    cin >> Guess;
+
+    if (Guess == 3) {
+        cout << "Correct!" << endl;
+        Total += 10; // Add points for correct answer
+    } else {
+        cout << "Incorrect! The correct answer is London." << endl;
+    }
+
+    return 0;
+}

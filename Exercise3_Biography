@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string name;
+    int age;
+    string country;
+    string hobby;
+    string profession;
+
+    // Input section
+    cout << "Enter your name: ";
+    getline(cin, name);
+
+    cout << "Enter your age: ";
+    cin >> age;
+    cin.ignore(); // clear newline from buffer
+
+    cout << "Enter your country: ";
+    getline(cin, country);
+
+    cout << "Enter your hobby: ";
+    getline(cin, hobby);
+
+    cout << "Enter your profession: ";
+    getline(cin, profession);
+
+    // Output biography
+    cout << "\n--- Biography ---\n";
+    cout << "Name: " << name << endl;
+    cout << "Age: " << age << endl;
+    cout << "Country: " << country << endl;
+    cout << "Hobby: " << hobby << endl;
+    cout << "Profession: " << profession << endl;
+
+    cout << "\n" << name << " is a " << age << "-year-old " << profession
+         << " from " << country << ". In free time, " << name
+         << " enjoys " << hobby << "." << endl;
+
+    return 0;
+}
+
